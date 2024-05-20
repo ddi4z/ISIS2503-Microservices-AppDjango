@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'measurements',
+    'places',
 ]
 
 MIDDLEWARE = [
@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'monitoring.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get("MEASUREMENTS_DB", "measurements_db"),
-        'USER': os.environ.get("MEASUREMENTS_DB_USER", "measurements_user"),
-        'PASSWORD': os.environ.get("MEASUREMENTS_DB_PASSWD", "isis2503"),
-        'HOST': os.environ.get("MEASUREMENTS_DB_HOST", "10.128.0.83"),
-        'PORT': os.environ.get("MEASUREMENTS_DB_PORT", "5432")
+        'NAME': os.environ.get("PLACES_DB", "places_db"),
+        'USER': os.environ.get("PLACES_DB_USER", "places_user"),
+        'PASSWORD': os.environ.get("PLACES_DB_PASSWD", "isis2503"),
+        'HOST': os.environ.get("PLACES_DB_HOST", "10.128.0.83"),
+        'PORT': os.environ.get("PLACES_DB_PORT", "5432")
     }
 }
 
@@ -134,4 +134,3 @@ STATICFILES_DIRS = (
 )
 
 PATH_VAR = "http://" + os.environ.get("VARIABLES_HOST", "10.128.0.84") + ":" + os.environ.get("VARIABLES_PORT", "8080") + "/variables"
-PATH_PLA = "http://" + os.environ.get("PLACES_HOST", "10.128.0.87") + ":" + os.environ.get("PLACES_PORT", "8080") + "/places"
