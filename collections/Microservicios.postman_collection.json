@@ -249,6 +249,78 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Places",
+			"item": [
+				{
+					"name": "Create Place",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ML-101\",\r\n    \"data\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://<ip>:8080/placecreate/",
+							"protocol": "http",
+							"host": [
+								"34",
+								"123",
+								"62",
+								"22"
+							],
+							"port": "8080",
+							"path": [
+								"placecreate",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Places",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://<ip>:8080/places/",
+							"protocol": "http",
+							"host": [
+								"34",
+								"123",
+								"62",
+								"22"
+							],
+							"port": "8080",
+							"path": [
+								"places",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
