@@ -18,6 +18,6 @@ def PlaceCreate(request):
         data = request.body.decode('utf-8')
         data_json = json.loads(data)
         place = Place()
-        place.name = place['name']
+        place.name = data_json['name']
         place.save()
         return HttpResponse("successfully created place")
